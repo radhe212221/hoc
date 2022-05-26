@@ -12,12 +12,12 @@ const C2 = (props) => {
 const C3 = (props) => {
   return <h3 onDoubleClick={props?.onchilClick}>counter : {props?.x}</h3>;
 };
-function hoc(Comp) {
-  const Feature = (props) => {
+function hoc(PassedComponent) {
+  const NewComponent = (props) => {
     const [x, setx] = useState(0);
-    return <Comp x={x} onchilClick={() => setx(x + 1)} />;
+    return <PassedComponent x={x} onchilClick={() => setx(x + 1)} />;
   };
-  return <Feature />;
+  return <NewComponent />;
 }
 
 export default function App() {

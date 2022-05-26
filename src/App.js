@@ -13,7 +13,6 @@ export default function App() {
 
 const C1 = () => {
   const [x, setx] = useState(0);
-  console.log(useState(0));
   return <h1 onClick={() => setx(x + 1)}>counter : {x}</h1>;
 };
 
